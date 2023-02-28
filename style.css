@@ -1,0 +1,362 @@
+
+:root{
+    --text-light-red: hsl(356, 100%, 66%); /* CAT text */
+    --text-Very-light-red: hsl(355, 100%, 74%);/* (CTA hover background) */
+    --Very-dark-blue: hsl(208, 49%, 24%);/* (headings) */
+    --White: hsl(0, 0%, 100%); /*text*/
+    --Grayish-blue: hsl(240, 2%, 79%);/* (footer text) */
+    --Very-dark-black-blue: hsl(240, 10%, 16%);/* (footer background) */
+    --Very-dark-grayish-blue: hsl(207, 13%, 34%);/* (body copy) */
+    /* Background gradient - Intro/CTA mobile nav: */
+    --Very-light-red: hsl(13, 100%, 72%);
+    --Light-red: hsl(353, 100%, 62%);
+    /* Background gradient - body: */
+    --Very-dark-gray-blue: hsl(237, 17%, 21%);
+    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+
+
+*{
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+    font-family: 'Overpass','Ubuntu', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: var(--White);
+}
+
+.header{
+    background: linear-gradient(135deg,var(--Very-light-red), var(--Light-red));
+    padding: 1em 0em 3em 0em;
+    border-radius: 0  0 0 80px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-image: url('/images/bg-pattern-intro-desktop.svg');
+    background-repeat: no-repeat;
+    opacity: .5;
+    background-position: center left 25%;
+    z-index: -1;
+}
+
+.navbar-container{
+    gap: 3em;
+}
+
+.nav-ul{
+    gap: 1em;
+}
+
+.account-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.account-btn button, .morinfobtns button{
+    border-radius: 40px;
+    font-weight: bolder;
+}
+
+.account-btn .sign-up{
+    color: var(--text-light-red);
+}
+
+.nav-item a{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dropdown-menu{
+    background-color: var(--White);
+}
+
+.dropdown-item{
+    text-align: center;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: 5em auto;
+
+}
+
+h1, .description p{
+    color: var(--White);
+}
+
+.morinfobtns{
+    display: flex;
+    gap: 1em;
+
+}
+
+/* designed sections style */
+
+.Designed-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5em 0 3em 0;
+    gap: 2em;
+}
+
+.plog{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.plog-text{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 5em 0;
+}
+
+.img-section{
+    width: 45%;
+    background-image: url('/images/illustration-editor-desktop.svg');
+    background-size: cover;
+}
+
+
+/* infrastructure section style */
+.infrastructuere{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    position: relative;
+    color: var(--White);
+}
+
+.inf-background{
+    position: absolute;
+    width: 100vw;
+    height: 70%;
+    background: linear-gradient(135deg,var(--Very-dark-gray-blue),var(--Very-dark-desaturated-blue));
+    z-index: -1;
+    border-radius: 0 80px 0 80px;
+}
+
+.inf-img-sec{
+    background-image: url('/images/bg-pattern-circles.svg');
+    background-size: cover;
+}
+
+
+/* feature section style */
+.feature{
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    padding: 10em 0;
+}
+
+.feat-img-section{
+    width: 45%;
+}
+
+.feat-img-section img{
+    width: 100%;
+}
+
+.feat-plog-section{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/* footer-section style */
+.footer-section{
+    background-color: var(--Very-dark-black-blue);
+    border-radius: 0 80px 0 0;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    color: var(--White);
+    width: 70%;
+}
+
+.footer-logo{
+    width: 25%;
+    
+}
+
+.col--1, .col--2, .col--3{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.footer-item{
+    color: var(--Grayish-blue);
+    cursor: pointer;
+}
+
+.footer-item:hover{
+    color: var(--White);
+}
+
+
+
+
+
+
+
+
+
+/* mobile style */
+@media screen and (max-width: 995px){
+    .mobile-collapse{
+        background-color: var(--White);
+        border-radius: 5px;
+        padding: 2em 0;
+    }
+
+    .mobile-collapse ul{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .account-btn{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .account-btn .sign-up{
+    background: linear-gradient(135deg,var(--Very-light-red), var(--Light-red)) ;
+    color: var(--White);
+    }
+
+    .account-btn .login{
+        background-color:var(--White);
+        color: var(--Very-dark-black-blue);
+    }
+
+    /* designed sections mobile style */
+
+    .plog{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plog-text{
+        order: 1;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .plog-text .first-p, .plog-text .second-p{
+        text-align: center;
+        margin-top: 2em;
+        padding: 2em 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .img-section{
+        display: flex;
+        width: 100%;
+        max-width: 540px;
+        height: calc(70vw + 3em);
+        max-height: 450px;
+        background-image: url('/images/illustration-editor-mobile.svg');
+        order: 0;
+    }
+
+    /* infrastructure section mobile style */
+    .infrastructuere{
+        flex-direction: column;
+        padding-bottom: 5em;
+    }
+
+    .inf-background{
+        top: 18%;
+        height: 80%;
+    }
+
+    .inf-img-sec img{
+        max-width: 100%;
+    }
+
+    .inf-plog-sec{
+        text-align: center;
+        width: 80%;
+    }
+
+    /* feature section style */
+    .feature{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feat-img-section{
+        width: 80%;
+    }
+
+    .feat-plog-section{
+        width: 80%;
+        text-align: center;
+    }
+
+    /* footer-section mobile style */
+    .footer-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        text-align: center;
+    }
+} 
+
+
+
+@media screen and (max-width: 450px){
+    .morinfobtns{
+        flex-direction: column;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
